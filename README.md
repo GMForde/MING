@@ -64,6 +64,42 @@ The MING stack provides a comprehensive solution for industrial IoT (IIoT) appli
 - Node-Red: 1880
 - Grafana: 3000
 
+## Help Specific for Container Components
+
+If you encounter issues with any of the components in the MING stack, refer to the following help topics:
+
+### Mosquitto Broker
+- Check the logs with:
+  ```bash
+  docker logs mosquitto
+  ```
+- Ensure the configuration file `mosquitto.conf` is correctly set up.
+- Verify that port 1883 is open and not blocked by a firewall.
+
+### InfluxDB
+- Access the logs with:
+  ```bash
+  docker logs influxdb
+  ```
+- Ensure the database is accessible at `http://localhost:8086`.
+- Verify user credentials and database retention policies.
+
+### Node-Red
+- View the logs with:
+  ```bash
+  docker logs nodered
+  ```
+- Check the Node-Red editor at `http://localhost:1880` for flow issues.
+- Confirm that all required nodes and integrations are installed.
+
+### Grafana
+- Check logs with:
+  ```bash
+  docker logs grafana
+  ```
+- Ensure dashboards are properly configured and data sources are connected.
+- Verify that the Grafana server is accessible at `http://localhost:3000`.
+
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
 
