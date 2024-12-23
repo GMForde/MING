@@ -1,4 +1,4 @@
-# MING Manufacturing Tech Stack Project
+# MING Stack Project
 
 This repository contains the Docker and Portainer setup for the MING Stack, which includes the following components:
 
@@ -99,6 +99,41 @@ If you encounter issues with any of the components in the MING stack, refer to t
   ```
 - Ensure dashboards are properly configured and data sources are connected.
 - Verify that the Grafana server is accessible at `http://localhost:3000`.
+
+## Environment Variables
+
+Each container in the MING stack can be configured using environment variables. Below are some commonly used variables:
+
+### Mosquitto
+- `MOSQUITTO_USER`: MQTT username.
+- `MOSQUITTO_PASS`: MQTT password.
+- `MOSQUITTO_PORT`: Port for MQTT communication (default: 1883).
+
+### InfluxDB
+- `INFLUXDB_ADMIN_USER`: Admin username.
+- `INFLUXDB_ADMIN_PASSWORD`: Admin password.
+- `INFLUXDB_DB`: Default database name.
+
+### Node-Red
+- `NODE_RED_PORT`: Port for Node-Red (default: 1880).
+
+### Grafana
+- `GF_SECURITY_ADMIN_USER`: Admin username.
+- `GF_SECURITY_ADMIN_PASSWORD`: Admin password.
+
+Update these variables in the `.env` file or directly in the `docker-compose.yml` file.
+
+## Deploying in Portainer
+
+To deploy the MING stack in Portainer:
+
+1. Log into the Portainer web interface.
+2. Navigate to **Stacks** in the menu.
+3. Click **+ Add Stack**.
+4. Provide a name for the stack (e.g., `MING Stack`).
+5. Copy and paste the contents of the `docker-compose.yml` file into the editor.
+6. Click **Deploy the stack**.
+7. Monitor the deployment process and ensure all containers are running.
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
