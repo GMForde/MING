@@ -30,10 +30,13 @@ The MING stack provides a comprehensive solution for industrial IoT (IIoT) appli
    cd ming-stack
    ```
 
-2. Start the stack using Docker Compose:
-   ```bash
-   docker-compose up -d
-   ```
+2. Deploy the stack in Portainer:
+   - Log into the Portainer web interface.
+   - Navigate to **Stacks** in the menu.
+   - Click **+ Add Stack**.
+   - Provide a name for the stack (e.g., `MING Stack`).
+   - Copy and paste the contents of the `docker-compose.yml` file into the editor.
+   - Click **Deploy the stack**.
 
 3. Access the services:
    - **Mosquitto**: MQTT broker available on `mqtt://localhost:1883`
@@ -122,18 +125,6 @@ Each container in the MING stack can be configured using environment variables. 
 - `GF_SECURITY_ADMIN_PASSWORD`: Admin password.
 
 Update these variables in the `.env` file or directly in the `docker-compose.yml` file.
-
-## Deploying in Portainer
-
-To deploy the MING stack in Portainer:
-
-1. Log into the Portainer web interface.
-2. Navigate to **Stacks** in the menu.
-3. Click **+ Add Stack**.
-4. Provide a name for the stack (e.g., `MING Stack`).
-5. Copy and paste the contents of the `docker-compose.yml` file into the editor.
-6. Click **Deploy the stack**.
-7. Monitor the deployment process and ensure all containers are running.
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
