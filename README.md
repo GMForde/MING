@@ -26,7 +26,7 @@ The MING stack provides a comprehensive solution for industrial IoT (IIoT) appli
 
 1. Clone this repository to your local machine:
    ```bash
-   git clone https://github.com/your-username/ming-stack.git
+   git clone https://github.com/gmforde/ming-stack.git
    cd ming-stack
    ```
 
